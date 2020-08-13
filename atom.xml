@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[René Yépiz]]></title>
+  <link href="http://yepizrene.github.io/atom.xml" rel="self"/>
+  <link href="http://yepizrene.github.io/"/>
+  <updated>2020-08-13T15:38:57-07:00</updated>
+  <id>http://yepizrene.github.io/</id>
+  <author>
+    <name><![CDATA[yepizrene]]></name>
+    <email><![CDATA[yepizrene@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Empezando Con GitHub Pages]]></title>
+    <link href="http://yepizrene.github.io/blog/2017/01/17/como-crear-tu-pagina-en-github/"/>
+    <updated>2017-01-17T15:40:22-07:00</updated>
+    <id>http://yepizrene.github.io/blog/2017/01/17/como-crear-tu-pagina-en-github</id>
+    <content type="html"><![CDATA[<p><img src="http://yepizrene.github.io/images/banners/octopress.png" title="" alt="" /></p>
+
+<p>Hace tiempo que he querido comenzar un blog donde poder compartir mis ideas y proyectos de desarrollo, sin embargo, no encontraba la herramienta que se ajustara a mis necesidades perfectamente y que fuera a un bajo costo incluso nulo, pero un día navegando por internet en un blog de un desarrollador encontré información sobre cómo crear contenido con <a href="https://pages.github.com/">GitHub Pages</a> GitHub Pages, yo ya había conocido un poco al respecto sin embargo la primera vez que intente hacerlo me fue fatal y no lo volví a intentar hasta ahora.</p>
+
+<!-- more -->
+
+
+<p>Durante mi primer intento leí algo al respecto de <a href="https://jekyllrb.com/">Jekyll</a> y las plantillas liquid, sin embargo, me pareció algo muy tardado y a veces no tenemos tiempo para poder estar haciendo plantillas y plantillas para cada una de nuestras páginas, post, artículos, secciones, etc.</p>
+
+<p>Sin embargo, reciente mente en el último encuentro que tuve con GitHub Pages me encontré con <a href="http://octopress.org/">Octopress</a> un framework de Jekyll que nos facilita demasiado el trabajo, ya que permite crear un sitio web estático a partir de plantillas en HTML y documentos escritos en Markdown, en pocas palabras creamos un nuevo artículo lo editamos en el editor de texto de nuestra preferencia, guardamos y con unos cuantos comandos en la terminal o consola podemos generar un post y desplegar resultados en nuestro servidor.</p>
+
+<h3>Características</h3>
+
+<ul>
+<li>Desarrollado en ruby.</li>
+<li>Cuenta con plugins para Twitter, Google Analytics, Disqus y otros más.</li>
+<li>Una de las grandes ventajas es que son paginas estáticas por lo cual no se necesita ningún tipo de procesamiento en el servidor, haciendo de la carga una tarea mucho más fácil, veras como tu sitio vuela, acceso más rápido a tu blog.</li>
+<li>Otra característica es que no dependemos de una base de datos, podemos guardar nuestros artículos donde deseemos.</li>
+<li>Hay muchos themes disponibles para Octopress, lo que hacen de el un framework muy personalizable.</li>
+<li>Compatibilidad con GitHub Pages, lo que nos permite ahorrarnos el pago del hospedaje.</li>
+</ul>
+
+
+<h2>¿Como instalar?</h2>
+
+<p>Antes de comenzar es necesario tener instalado Jekyll para poder usar Octopress y para Jekyll es necesario tener instalado:</p>
+
+<ol>
+<li><a href="https://www.ruby-lang.org/es/">Ruby</a></li>
+<li><a href="https://rubygems.org/pages/download">RubyGems</a></li>
+</ol>
+
+
+<p>Una vez está listo, instalamos la gema de Jekyll con <code>gem install jekyll</code>, este utiliza <a href="https://github.com/bhollis/maruku">Maruku</a> por defecto, pero podemos cambiarlo por LaTex, RDiscount o Kramadown, pero recomiendo que dejen Maruku. Lo siguiente es crear nuestro blog, para el cual tenemos dos opciones, como mencione antes utilizar Jekyll directamente o el framework Octopress no obstante explicare ambos métodos, pero yo me quedo con Octopress.</p>
+
+<h2>Crear blog con Jekyll</h2>
+
+<p>Jekyll da la posibilidad de crear la estructura de nuestro blog mediante el comando <code>jekyll new username.github.io</code> la cual nos creara la carpeta llamada username.github.io, recordemos que username es nuestro usuario u organización de GitHub. Esto genera la estructura siguiente:</p>
+
+<pre><code>.
+├── _config.yml
+├── _layouts
+|   ├── default.html
+|   └── post.html
+├── _posts
+|   └── 2013-12-18-welcome-to-jekyll.markdown
+├── css
+|   ├── main.css
+|   └── syntax.css
+└── index.html
+</code></pre>
+
+<p>Después podemos crear más carpetas y archivos, pero estos son los que se necesitan para empezar:</p>
+
+<ul>
+<li><strong>_config.yml:</strong> almacena la información de configuración. Muchas de las opciones pueden especificarse desde la consola, pero es mejor describirlas en este archivo así no tenemos que recordarlas.</li>
+<li><strong>layouts:</strong> son las plantillas <a href="https://help.shopify.com/themes/liquid/basics">Liquid</a> que se utilizan en los articulos, el layout se define en cada articulo en la información preliminar en <a href="http://jekyllrb.com/docs/frontmatter/">YAML</a> la etiqueta se utiliza para inyectar el contenido en la página web.</li>
+<li><strong>_posts:</strong> aquí se encuentran todos los artículos que vayamos escribiendo, es importante que el formato de los archivos siga la siguiente estructura: año-mes-día-título.MARKUP. los enlaces permanentes se pueden personalizar para cada artículo, pero la fecha y el lenguaje de marcado se define solamente por el nombre del archivo.
+Esta es la información esencial para empezar a crear un blog con Jekyll, para aprender mas sobre <a href="http://jekyllrb.com/docs/templates/">plantillas</a>, <a href="http://jekyllrb.com/docs/permalinks/">enlaces permanentes</a>, <a href="http://jekyllrb.com/docs/pagination/">paginación</a> y <a href="http://jekyllrb.com/docs/plugins/">plugins</a> puedes leer la <a href="http://jekyllrb.com/docs/home/">documentación de Jekyll</a>.</li>
+</ul>
+
+
+<h2>Crear blog con Octopress</h2>
+
+<p>Es una buena idea el no empezar desde cero creando nuestras propias plantillas HTML, CSS y javascript, para esto podemos utilizar <a href="http://octopress.org/">Octopress</a>, el framework del que les he estado hablando, Octopress incluye:</p>
+
+<ul>
+<li>Plantilla de HTML5.</li>
+<li>Diseño mobile first responsive.</li>
+<li>Soporte para Twitter, Google Plus One, comentario DIsqus, Pinboard, Delicious y Google Analytics.</li>
+<li>Facil despligue usando Github Pages o Rsync.</li>
+<li>Temas construidos con Compass y Sass</li>
+<li>Un resaltado de sintaxis Beautiful Solarized</li>
+</ul>
+
+
+<p>Además, hay plugins creados por Octopress o por la comunidad de Jekyll con algunas mejoras.
+Para empezar con Octopress debemos tener Ruby 1.9.3 o posterior, podemos comprobarlo escribiendo en la consola <code>ruby --version</code>.  Una vez comprobado ejecutamos los siguientes comandos:</p>
+
+<ul>
+<li>Clonamos el repositorio:</li>
+</ul>
+
+
+<pre><code>git clone git://github.com/imathis/octopress.git username.github.io
+</code></pre>
+
+<ul>
+<li>Instalamos dependencias:</li>
+</ul>
+
+
+<pre><code>gem install bundler
+rbenv rehash  # Si usas rbenv, rehash para poder utilizar el comando bundle
+bundle install
+</code></pre>
+
+<p>*Instalamos la plantilla por default:</p>
+
+<pre><code>rake install
+</code></pre>
+
+<h2>Desplegar en GitHub.</h2>
+
+<p>Una vez tenemos la primera versión de nuestro blog podemos desplegarlo en GitHub. Recuerda que necesitamos primero crear el repositorio con nombre <code>username.github.io</code>. Una vez que tenemos esto configuraremos nuestro clon de Octopress para poder hacer los commits en el repositorio que acabamos de crear. Para esto hay un comando el cual solicita la URL de nuestro repositorio y configura todo lo necesario para usar nuestro blog como GitHub Page.</p>
+
+<pre><code>rake setup_github_pages
+</code></pre>
+
+<p>Este comando hace lo siguiente:</p>
+
+<ol>
+<li>Solicita la url del repositorio (HTTP SSH).</li>
+<li>Cambia el nombre del puntero remoto de imathis/octopress de <code>origin</code> a <code>octopress</code>.</li>
+<li>Añade el repositorio GitHub Pages como <code>origin</code>.</li>
+<li>Cambia la rama activa de <code>master</code> a <code>source</code>.</li>
+<li>Configura la url del blog de acuerdo al nombre del repositorio.</li>
+<li>Configura de una rama <code>master</code> en el directorio <code>_deploy</code> para el despliegue.
+Una vez configurado el entorno para trabajar con GitHub Pages podemos previsualizar el resultado ejecutando el siguiente comando:</li>
+</ol>
+
+
+<pre><code>rake preview
+</code></pre>
+
+<p>Una vez nos aseguramos que todo está listo para subirlo a GitHub debemos generar contenido estático y desplegarlo:</p>
+
+<pre><code>rake generate
+rake deploy
+</code></pre>
+
+<p>Además tenemos que subir el código fuente a del blog:</p>
+
+<pre><code>git add .
+git commit -m ‘GitHub Page new’
+git push origin source
+</code></pre>
+
+<h2>Nuestro primer post</h2>
+
+<p>Una vez configurado el entorno local y desplegado en GitHub llega el momento de escribir el primer post. Todos estos se encuentran en la carpeta <code>_post</code> y deben tener el siguiente formato <code>aaaa-mm-dd-title.MARKUP</code> donde <code>MARKUP</code> es la extensión del archivo, en nuestro caso será <code>md</code>. El formato del nombre es un requerimiento de Jekyll, así que tenemos que cumplirlo al pie de la letra.
+En Octopress los post se ubican en <code>source/_posts</code> y podemos automatizar la creación de nuevos articulos utilizando el siguiente comando:</p>
+
+<pre><code>rake new_post["title"]
+</code></pre>
+
+<p>El contenido se creara de forma automática con el formato adecuado y el motor de markup que elegimos, pero adicionalemente disponemos de todas las características de las templates liquid descritas en la documentación de Jekyll.</p>
+
+<p>Podemos definir el separador del extracto usando la variable de configuración <code>excerpt_separator</code> en caso de estar usando Octopress el separador por default es : <code>&lt;!--more --&gt;</code>.</p>
+]]></content>
+  </entry>
+  
+</feed>
