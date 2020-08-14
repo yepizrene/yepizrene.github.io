@@ -136,4 +136,3 @@ rake new_post["title"]
 El contenido se creara de forma automática con el formato adecuado y el motor de markup que elegimos, pero adicionalemente disponemos de todas las características de las templates liquid descritas en la documentación de Jekyll.
 
 Podemos definir el separador del extracto usando la variable de configuración `excerpt_separator` en caso de estar usando Octopress el separador por default es : `<!--more -->`.
-
